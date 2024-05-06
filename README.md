@@ -1,8 +1,7 @@
 # Serverless Deployment Policy
-Sadly, this is not clearly mentioned in the Servless documentation. 
-But **never use the "Administration Role" on Production!** 
-Because if you get access to these access keys, 
-you can easily create a new user with web console access and have full access to your AWS account.
+Sadly, the serverless documentation does not clearly mention that the **“Administration Role” should never be used in production environments**. 
+Using this role can cause significant security risks. If someone gains access to these keys, 
+they may be able to create a new user with access to the web console and take full control of your AWS account.
 
 Furthermore, avoid using the "Administration Role" for any AWS account if you only 
 store the keys in GitHub Secrets without using the GitHub Environment with the "Protected Branch" configuration.  
