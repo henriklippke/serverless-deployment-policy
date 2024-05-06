@@ -4,8 +4,8 @@ But **never use the "Administration Role" on Production!**
 Because if you get access to these access keys, 
 you can easily create a new user with web console access and have full access to your AWS account.
 
-I would even say never use this "Administration Aole" for an AWS account if you only 
-store the keys in GitHub Secrets without using the GitHub Environment with protected branches configuration.  
+I would even say never use this "Administration Role" for any AWS account, if you only 
+store the keys in GitHub Secrets without using the GitHub Environment with the "Protected Branch" configuration.  
 
 Because if you only store the keys in Github Secrets, 
 any user who is allowed to commit to any branch can use Github Actions to send the keys to their own backend:
