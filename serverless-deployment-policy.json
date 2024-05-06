@@ -17,7 +17,7 @@
                 "cloudformation:ExecuteChangeSet",
                 "cloudformation:GetTemplate",
                 "cloudformation:DescribeChangeSet",
-		        "cloudformation:DescribeStacks",
+		"cloudformation:DescribeStacks",
                 "iam:GetRole",
                 "iam:CreateRole",
                 "iam:DeleteRole",
@@ -27,7 +27,7 @@
                 "iam:DeleteRolePolicy",
                 "iam:TagRole",
                 "iam:TagPolicy",
-		        "lambda:UpdateFunctionCode",
+		"lambda:UpdateFunctionCode",
                 "lambda:Get*",
                 "lambda:CreateFunction",
                 "lambda:InvokeFunction",
@@ -37,7 +37,7 @@
                 "lambda:DeleteLayerVersion",
                 "lambda:List*",
                 "lambda:AddPermission",
-		        "lambda:UpdateFunctionConfiguration",
+		"lambda:UpdateFunctionConfiguration",
                 "logs:CreateLogGroup",
                 "logs:DeleteLogGroup",
                 "logs:TagResource",
@@ -50,26 +50,14 @@
                 "s3:PutEncryptionConfiguration",
                 "s3:GetBucketPolicy",
                 "s3:PutBucketPolicy",
-                "dynamodb:DescribeTable"
-            ],
-            "Effect": "Allow",
-            "Resource": "*"
-        },
-        {
-            "Sid": "ServerlessApiPolicies",
-            "Action": [
+                "dynamodb:DescribeTable",
+		"sqs:GetQueueAttributes",
+                "sqs:SetQueueAttributes",
                 "apigateway:GET",
                 "apigateway:POST",
                 "apigateway:PUT",
                 "apigateway:PATCH",
-                "apigateway:DELETE"
-            ],
-            "Effect": "Allow",
-            "Resource": "*"
-        },
-        {
-            "Sid": "ServerlessResourcePolicies",
-            "Action": [
+                "apigateway:DELETE",
                 "ssm:PutParameter",
                 "ssm:DeleteParameter",
                 "ssm:AddTagsToResource",
