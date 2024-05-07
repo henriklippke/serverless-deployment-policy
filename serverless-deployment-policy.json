@@ -38,6 +38,8 @@
                 "lambda:List*",
                 "lambda:AddPermission",
 		"lambda:UpdateFunctionConfiguration",
+		"lambda:TagResource",
+		"lambda:RemovePermission",
                 "logs:CreateLogGroup",
                 "logs:DeleteLogGroup",
                 "logs:TagResource",
