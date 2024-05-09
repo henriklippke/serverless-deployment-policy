@@ -54,6 +54,7 @@
                 "s3:GetBucketPolicy",
                 "s3:PutBucketPolicy",
                 "dynamodb:DescribeTable",
+		"dynamodb:UpdateTable",
 		"sqs:GetQueueAttributes",
                 "sqs:SetQueueAttributes",
                 "apigateway:GET",
