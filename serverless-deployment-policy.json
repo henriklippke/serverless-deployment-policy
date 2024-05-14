@@ -57,6 +57,8 @@
 		"dynamodb:UpdateTable",
 		"dynamodb:TagResource",
 		"dynamodb:ListTagsOfResource",
+                "dynamodb:CreateTable",
+                "dynamodb:UpdateContinuousBackups",
 		"sqs:GetQueueAttributes",
                 "sqs:SetQueueAttributes",
                 "apigateway:GET",
