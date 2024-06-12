@@ -21,7 +21,8 @@
                 "dynamodb:GetItem",
                 "dynamodb:BatchGetItem",
                 "dynamodb:Query",
-                "dynamodb:Scan"
+                "dynamodb:Scan",
+                "s3:GetObject"
             ],
             "Resource": "*"
         }
