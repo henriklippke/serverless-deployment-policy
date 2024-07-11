@@ -10,6 +10,7 @@
             "Effect": "Deny",
             "Action": [
                 "ec2:StartInstances",
+                "ecs:CreateCluster",
                 "rds:StartDBInstance",
                 "ses:SendEmail",
                 "ses:SendRawEmail",
